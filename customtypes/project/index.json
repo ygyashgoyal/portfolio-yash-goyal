@@ -39,6 +39,12 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "biography": {
+              "type": "SharedSlice"
+            },
+            "link_block": {
+              "type": "SharedSlice"
+            },
             "image": {
               "type": "SharedSlice"
             },

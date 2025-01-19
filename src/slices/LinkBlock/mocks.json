@@ -1,0 +1,29 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Quis enim minim commodo proident sit laborum velit nostrud ea. Occaecat ullamco consequat veniam labore cillum aliquip. Occaecat occaecat ipsum adipisicing."
+						}
+					}
+				]
+			},
+			"link": {
+				"__TYPE__": "LinkContent",
+				"key": "27aba65d-c736-45bf-9fc9-c7eb2f0489c3",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com",
+					"text": "cloud"
+				}
+			}
+		},
+		"items": []
+	}
+]
