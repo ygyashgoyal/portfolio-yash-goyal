@@ -241,7 +241,6 @@ export type PageDocument<Lang extends string = string> =
 
 type ProjectDocumentDataSlicesSlice =
   | BiographySlice
-  | LinkBlockSlice
   | ImageSlice
   | TextBlockSlice;
 
@@ -868,61 +867,6 @@ type ImageSliceVariation = ImageSliceDefault;
 export type ImageSlice = prismic.SharedSlice<"image", ImageSliceVariation>;
 
 /**
- * Primary content in *LinkBlock → Default → Primary*
- */
-export interface LinkBlockSliceDefaultPrimary {
-  /**
-   * Description field in *LinkBlock → Default → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: link_block.default.primary.description
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  description: prismic.RichTextField;
-
-  /**
-   * Link field in *LinkBlock → Default → Primary*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: link_block.default.primary.link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link: prismic.LinkField;
-}
-
-/**
- * Default variation for LinkBlock Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type LinkBlockSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Simplify<LinkBlockSliceDefaultPrimary>,
-  never
->;
-
-/**
- * Slice variation for *LinkBlock*
- */
-type LinkBlockSliceVariation = LinkBlockSliceDefault;
-
-/**
- * LinkBlock Shared Slice
- *
- * - **API ID**: `link_block`
- * - **Description**: LinkBlock
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type LinkBlockSlice = prismic.SharedSlice<
-  "link_block",
-  LinkBlockSliceVariation
->;
-
-/**
  * Primary content in *TechList → Default → Primary*
  */
 export interface TechListSliceDefaultPrimary {
@@ -1095,10 +1039,6 @@ declare module "@prismicio/client" {
       ImageSliceDefaultPrimary,
       ImageSliceVariation,
       ImageSliceDefault,
-      LinkBlockSlice,
-      LinkBlockSliceDefaultPrimary,
-      LinkBlockSliceVariation,
-      LinkBlockSliceDefault,
       TechListSlice,
       TechListSliceDefaultPrimary,
       TechListSliceDefaultItem,
